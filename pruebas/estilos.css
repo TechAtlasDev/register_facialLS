@@ -1,0 +1,324 @@
+h1 {
+    margin-top: 1.2vw;
+    font-size: 3vw;
+    font-family: roboto;
+}
+
+.titulo_contenedor {
+    border-radius: 1vw;
+    box-shadow: 0vw 2vh 3vh rgb(36, 36, 36);
+    text-align: center;
+    position: relative;
+    min-width: fit-content;
+    padding: 0.5vh 1.5vw;
+    background-color: #e7eff7;
+    color: black;
+    width: 1vw;
+    margin: 0 auto;
+}
+
+body {
+    background: rgb(0,228,255);
+    background: linear-gradient(90deg, rgba(0,228,255,1) 12%, rgba(55,0,255,1) 68%);
+  }
+
+.insignia {
+    position: absolute;
+    width: 8vw;
+    margin-top: 3vh;
+    margin-left: 13vw;
+}
+
+.insignia2 {
+    position: absolute;
+    width: 8vw;
+    margin-top: 2vh;
+    margin-left: 3vw;
+}
+
+.aviso_amarillo {
+  background-color: rgb(255, 237, 177);
+  font-family: roboto;
+  overflow: hidden;
+  animation: expandir 5s infinite;
+  max-height: 70vh;
+  bottom: 3vh;
+  margin-left: 2vw;
+  margin-top: 9vw;
+  width: 17vw;
+  font-size: 3.6vh;
+  padding: 1vh 1vw;
+  color: black;
+  border: 0.2vw solid black;
+}
+
+.aviso_verde {
+  background-color: rgb(187, 255, 155);
+  font-family: roboto;
+  overflow: hidden;
+  animation: expandir 5s infinite;
+  max-height: 70vh;
+  bottom: 3vh;
+  margin-left: 2vw;
+  margin-top: 9vw;
+  width: 17vw;
+  font-size: 3.6vh;
+  padding: 1vh 1vw;
+  color: black;
+  border: 0.2vw solid black;
+}
+
+.aviso_rojo{
+  background-color: rgb(255, 171, 171);  
+  font-family: roboto;
+  overflow: hidden;
+  animation: expandir 5s infinite;
+  max-height: 70vh;
+  bottom: 3vh;
+  margin-left: 2vw;
+  margin-top: 9vw;
+  width: 17vw;
+  font-size: 3.6vh;
+  padding: 1vh 1vw;
+  color: black;
+  border: 0.2vw solid black;
+}
+
+.aviso_none {
+  background-color: rgb(255, 160, 250);  
+  font-family: roboto;
+  overflow: hidden;
+  animation: expandir 5s infinite;
+  max-height: 70vh;
+  bottom: 3vh;
+  margin-left: 2vw;
+  margin-top: 9vw;
+  width: 17vw;
+  font-size: 3.6vh;
+  padding: 1vh 1vw;
+  color: black;
+  border: 0.2vw solid black;
+}
+
+.tiempo_contenedor {
+    box-shadow: -1vw 2vh 3vh rgb(36, 36, 36);
+    border-radius: 2vw;
+    min-width: fit-content;
+    border: 0.3vw solid #ff8800;
+    position: absolute;
+    padding: 1vh 1vw;
+    width: 12vw;
+    top: 6vh;
+    margin-left: 82vw;
+    background-color: rgb(247, 237, 207);
+}
+
+#tiempo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6vh;
+}
+
+.insignias_1 {
+    background: linear-gradient(90deg, rgb(212, 243, 219) 12%, rgb(245, 241, 195) 68%);
+    box-shadow: 1vw 2vh 2vh rgb(66, 66, 66);
+    border-radius: 2vw;
+    left: 2vw;
+    width: 23vw;
+    height: 24vh;
+    position: absolute;
+}
+
+.contenedor_webcam {
+    max-height: 70vh;
+    top: 11vw;
+    left: 27vw;
+    background-color: rgb(192, 171, 171);
+    width: 40vw;
+    height: 55vh;
+    position: absolute;
+}
+
+.notificacion {
+    font-weight: bold;
+    font-family: roboto;
+    color: black;
+    opacity: 0.5;
+    animation: aparecer 2s ease-in-out;
+    background-color: #f1f1f1;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    right: 2vw;
+    padding: 1vh;
+    position: fixed;
+    width: 20vw;
+}
+
+.frase_contenedor {
+    text-align: center;
+    vertical-align: top;
+    max-height: 10%;
+    max-width: 70%;
+    position: absolute;
+    background-color: rgba(255, 244, 145, 0.877);
+    width: 48vw;
+    font-weight: bold;
+    font-family: roboto;
+    color: black;
+    font-size: 3vh;
+    left: 25vw;
+    top: 85vh;
+    padding: 1vh 1vw;
+  }
+
+.frase {
+    color: black;
+}
+
+.frase:after {
+    content: "|"; /* Agregar un cursor después del texto */
+    animation: espera 0.6s infinite; /* Animar el cursor */
+  }
+  
+.news {
+  font-size: 3vh;
+  padding: 1vh;
+  top: 35vh;
+  right: 2vw;
+  position: absolute;
+  width: 20vw;
+  background-color: rgb(255, 229, 253);
+  height: 40vh;
+  border: solid 0.5vh rgb(247, 17, 94);
+  box-shadow: -1vw 0vh 4vh rgb(36, 36, 36);
+  font-family: roboto;
+  overflow: hidden;
+}
+
+.creditos {
+  /* Aplica la animación y la repite indefinidamente */
+  animation-name: neon;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  text-align: center;
+  font-family: roboto bold;
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  top: 82vh;
+  right: 3vw;
+  background-color: rgb(5, 19, 56);
+  color: white;
+  font-weight: 600;
+  border-radius: 1vw;
+}
+
+
+@keyframes neon {
+  /* Define los estados de la animación */
+  0% {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+    box-shadow: -1vw 1vh 3vh rgb(131, 131, 131);
+  }
+  20% {
+    color: #fffd7f;
+    text-shadow: 0 0 10px #ffff00;
+    box-shadow: 1vw 1vh 3vh rgb(235, 235, 235);
+  }
+  40% {
+    color: #fffd7f;
+    text-shadow: 0 0 10px #ffff00;
+    box-shadow: 1vw -1vh 3vh rgb(235, 235, 235);
+  }
+  60% {
+    color: #ffffde;
+    text-shadow: 0 0 10px #ffffff;
+    box-shadow: -1vw -1vh 4vh rgb(131, 131, 131);
+  }
+  80% {
+    color: #fffd7f;
+    text-shadow: 0 0 10px #ffff00;
+    box-shadow: 0vw 0vh 3vh 1vw rgb(166, 255, 139);
+  }
+  100% {
+    color: #fffd7f;
+    text-shadow: 0 0 10px #ffff00;
+    box-shadow: -1vw 1vh 3vh rgb(131, 131, 131);
+  }
+}
+
+  /* La animación de escritura */
+  @keyframes espera {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  /* Aplicamos la animación al div con la clase "aviso" */
+  
+  @keyframes shine {
+    from {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    to {
+      box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.7);
+    }
+  }
+  @keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 110%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: black;
+    }
+    to {
+      border-color: transparent;
+    }
+  }
+
+  @keyframes borrado {
+    90% {
+        width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+
+  @keyframes escribir {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: auto;
+    }
+  }
+
+@keyframes aparecer {
+0% {
+    transform: translateY(100%);
+}
+50% {
+    transform: translateY(0);
+}
+100% {
+    transform: translateY(100%);
+}
+}
+  
+@keyframes expandir {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.05);
+    box-shadow: 1vh 2vh 3vh rgb(0, 0, 0);
+}
+100% {
+    transform: scale(1);
+}
+}

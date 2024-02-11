@@ -1,0 +1,72 @@
+<!-- ENTORNO DE PRUEBAS PARA EMULAR EL FUNCIONAMIENTO DE LA PAGINA WEB SIN TENER QUE EJECUTAR EL PROYECTO -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function updateTime() {
+          // Obtener la hora actual
+          var date = new Date();
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var seconds = date.getSeconds();
+    
+          // Formatear la hora con dos dígitos
+          if (hours < 10) {
+            hours = "0" + hours;
+          }
+          if (minutes < 10) {
+            minutes = "0" + minutes;
+          }
+          if (seconds < 10) {
+            seconds = "0" + seconds;
+          }
+    
+          // Mostrar la hora en la página web
+          document.getElementById("tiempo").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+    
+        // Actualizar la hora cada segundo
+        setInterval(updateTime, 1000);
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrador facial de usuarios - La Salle</title>
+</head>
+<body>
+    <div class="insignias_1">
+        <img src="insignia.png" alt="insignia_colegio" class="insignia">
+        <img src="insignia2.png" alt="insignia_colegio" class="insignia2">
+    </div>
+    <div class="titulo_contenedor">
+        <h1>Registrador facial de usuarios</h1>
+    </div>
+    <div class="tiempo_contenedor">
+        <h2><span id="tiempo"></span></h2>
+    </div>
+    <div class="aviso">
+        <p>Este es un comunicado de prueba, que se va a usar para fines de comunicación, o instrucción a los estudiantes que estén registrados, o se registren, si llegara a ser un comunicado, será de color rojo.</p>
+    </div>
+    <div class="contenedor_webcam">
+    </div>
+    <div class="notificacion">
+        ¡Mensaje de notificación!
+    </div>
+    <div class="frase_contenedor">
+        <p class="frase">Este es un ejemplo de un cuadro diseñado para poner frases del día, para los estudiantes.</p>
+    </div>
+    <div class="news">
+        <p class="frase_n">Este es un ejemplo de prueba</p>
+        <ul>
+            <li>Cesar Augusto</li>
+            <li>Giovanny Andree Jimenez Deza</li>
+            <li>AAAAAAAA</li>
+        </ul>
+    </div>
+    <div class="creditos">
+        <p class="Titulo">Créditos</p>
+        <p class="dev">GiovaDev - gjimenezdeza@gmail.com</p>
+    </div>
+</body>
+</html>

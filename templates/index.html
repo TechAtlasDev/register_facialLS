@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function updateTime() {
+          // Obtener la hora actual
+          var date = new Date();
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var seconds = date.getSeconds();
+    
+          // Formatear la hora con dos dígitos
+          if (hours < 10) {
+            hours = "0" + hours;
+          }
+          if (minutes < 10) {
+            minutes = "0" + minutes;
+          }
+          if (seconds < 10) {
+            seconds = "0" + seconds;
+          }
+    
+          // Mostrar la hora en la página web
+          document.getElementById("tiempo").innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+    
+        // Actualizar la hora cada segundo
+        setInterval(updateTime, 1000);
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css' ) }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector facial de usuarios</title>
+</head>
+<body>
+     <div class="insignias_1">
+          <img src="{{ url_for('static', filename='insignia.png') }}" alt="Insignia del colegio" class="insignia">
+          <img src="{{ url_for('static', filename='insignia2.png') }}" alt="Insignia del colegio" class="insignia2">
+     </div>
+     <div class="titulo_contenedor">
+          <h1>Registrador facial de usuarios</h1>
+     </div>
+     <div class="tiempo_contenedor">
+          <h2><span id="tiempo"></span></h2>
+     </div>
+     {% if color == "rojo" %}
+        <div class="aviso_rojo">
+              <p>{{ aviso }}</p>
+        </div>
+     {% elif color == "amarillo" %}
+        <div class="aviso_amarillo">
+              <p>{{ aviso }}</p>
+        </div>
+     {% elif color == "verde" %}
+        <div class="aviso_verde">
+              <p>{{ aviso }}</p>
+        </div>
+     {% else %}
+        <div class="aviso_none">
+              <p>{{ aviso }}</p>
+        </div>
+     {% endif %}
+      <div class="contenedor_webcam">
+          <img src="{{ url_for('video_feed') }}" id="capturadora">
+      </div>
+      <div class="notificacion">
+          ¡Mensaje de notificación!
+      </div>
+      <div class="frase_contenedor">
+          <p class="frase">{{ consejo }}</p>
+      </div>
+      {% if conteo_birth == 0 %}
+      <div class="news">
+        <p class="frase_n">El día de hoy no hay novedades</p>
+      </div>
+      {% else %}
+      <div class="news">
+        <p class="frase_n">{{ mensaje_birth }}</p>
+        <ul>
+          {% for nombres in usuarios_cumpleaños %}
+           <li>{{ nombres }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    <div class="creditos">
+        <p class="Titulo">Créditos</p>
+        <p class="dev">GiovaDev - gjimenezdeza@gmail.com</p>
+    </div>
+    </body>
+</html>
