@@ -39,10 +39,3 @@ Este sistema es un detector facial que tiene la capacidad de realizar diferentes
 |:------------:|:------------:|
 |   Español   |   ✅   |
 |   Ingles     |   ❌   |
-
-## Agradecimientos 🤝
-
-Este proyecto fué diseñado con el objetivo de agradecer a mis profesores y tutores que siempre estuvieron a mi lado para ayudarme en desarrollar mis objetivos, el cual, el <i>Colegio La Salle, de Juliaca</i> fue uno de los agentes impulsores más importantes de mi vida, lo cual me ayudaron a tomar mejores decisiones, decisiones que finalmente se convirtieron en un camino estable y apasionante, muchas gracias!.
-
-## Screenshot 📸
-![Image](captura_terminal.png)
